@@ -20,7 +20,6 @@ namespace CuffedTK
             => role == RoleType.ClassD || role == RoleType.ChaosInsurgency;
         public static bool IsScientistTeam(this RoleType role)
             => IsNtf(role) || role == RoleType.FacilityGuard || role == RoleType.Scientist;
-
         public static bool ValidHurt(this ExPlayer player, ExPlayer attacker)
             => player.IsCuffed && attacker != player && !attacker.Role.IsSCP();
     }

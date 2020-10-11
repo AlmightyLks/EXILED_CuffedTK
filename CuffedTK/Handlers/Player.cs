@@ -9,7 +9,7 @@ namespace CuffedTK.Handlers
 
         public void OnPlayerDeath(DiedEventArgs ev)
         {
-            if (!ev.Target.IsCuffed || ev.Killer == null)
+            if (!ev.Target.ValidHurt(ev.Killer))
                 return;
 
             string outputMessage = $"\nWas cuffed: {ev.Target.IsCuffed}" +
