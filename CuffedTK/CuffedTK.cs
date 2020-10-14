@@ -26,10 +26,6 @@ namespace CuffedTK
             UnregisterEvents();
             base.OnDisabled();
         }
-        public override void OnReloaded()
-        {
-            base.OnReloaded();
-        }
         private void RegisterEvents()
         {
             _player = new Handlers.Player();
