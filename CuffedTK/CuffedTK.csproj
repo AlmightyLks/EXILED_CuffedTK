@@ -39,14 +39,17 @@
     <Reference Include="CommandSystem.Core">
       <HintPath>bin\Debug\Exiled\CommandSystem.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.API">
-      <HintPath>bin\Debug\Exiled\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
+    <Reference Include="Exiled.API, Version=2.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dependencies\Exiled 2.1.6\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Events">
-      <HintPath>bin\Debug\Exiled\EXILED\Plugins\Exiled.Events.dll</HintPath>
+    <Reference Include="Exiled.Events, Version=2.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dependencies\Exiled 2.1.6\EXILED\Plugins\Exiled.Events.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Loader">
-      <HintPath>bin\Debug\Exiled\EXILED\Exiled.Loader.dll</HintPath>
+    <Reference Include="Exiled.Loader, Version=2.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dependencies\Exiled 2.1.6\EXILED\Exiled.Loader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

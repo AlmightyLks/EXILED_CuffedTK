@@ -9,14 +9,14 @@ namespace CuffedTK
     {
         public override PluginPriority Priority { get; } = PluginPriority.Default;
         public static Config SharedConfig { get; set; }
-        private Handlers.Player _Player;
+        private Handlers.Player _player;
 
         public override void OnEnabled()
         {
             if (SharedConfig is null)
                 SharedConfig = Config;
 
-            Log.Info("<AlmightyLks> CuffedTK");
+            Log.Info("<AlmightyLks> Plugin Loaded");
 
             RegisterEvents();
             base.OnEnabled();
@@ -26,19 +26,22 @@ namespace CuffedTK
             UnregisterEvents();
             base.OnDisabled();
         }
-
+        public override void OnReloaded()
+        {
+            base.OnReloaded();
+        }
         private void RegisterEvents()
         {
-            _Player = new Handlers.Player();
+            _player = new Handlers.Player();
 
-            ExPlayerEvents.Died += _Player.OnPlayerDeath;
-            ExPlayerEvents.Hurting += _Player.OnPlayerHurt;
+            ExPlayerEvents.Died += _player.OnPlayerDeath;
+            ExPlayerEvents.Hurting += _player.OnPlayerHurt;
         }
         private void UnregisterEvents()
         {
-            ExPlayerEvents.Died -= _Player.OnPlayerDeath;
-            ExPlayerEvents.Hurting -= _Player.OnPlayerHurt;
-            _Player = null;
+            ExPlayerEvents.Died -= _player.OnPlayerDeath;
+            ExPlayerEvents.Hurting -= _player.OnPlayerHurt;
+            _player = null;
         }
     }
 }
