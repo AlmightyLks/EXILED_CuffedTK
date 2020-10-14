@@ -1,25 +1,21 @@
-﻿using Exiled.API.Enums;
+﻿using ExPlayerEvents = Exiled.Events.Handlers.Player;
+using Exiled.API.Enums;
 using Exiled.API.Features;
 using System;
-
-using ExServerEvents = Exiled.Events.Handlers.Server;
-using ExPlayerEvents = Exiled.Events.Handlers.Player;
 
 namespace CuffedTK
 {
     public class CuffedTK : Plugin<Config>
     {
-        private static readonly Lazy<CuffedTK> LazyInstance = new Lazy<CuffedTK>(() => new CuffedTK());
-
-        public static CuffedTK Instance => LazyInstance.Value;
-        public override PluginPriority Priority { get; } = PluginPriority.Highest;
-
+        public override PluginPriority Priority { get; } = PluginPriority.Default;
+        public static Config SharedConfig { get; set; }
         private Handlers.Player _Player;
-
-        private CuffedTK() { }
 
         public override void OnEnabled()
         {
+            if (SharedConfig is null)
+                SharedConfig = Config;
+
             Log.Info("<AlmightyLks> CuffedTK");
 
             RegisterEvents();
@@ -30,7 +26,7 @@ namespace CuffedTK
             UnregisterEvents();
             base.OnDisabled();
         }
-        
+
         private void RegisterEvents()
         {
             _Player = new Handlers.Player();

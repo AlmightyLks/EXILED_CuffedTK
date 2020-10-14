@@ -12,7 +12,9 @@ namespace CuffedTK.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            response = $"\nAuto Jail: {CuffedTK.Instance.Config.AutoJail}\n Prevent Damage: {CuffedTK.Instance.Config.PreventDamage}\n Reflect Damage: {CuffedTK.Instance.Config.ReflectDamage}";
+            response = $"Auto Jail: {CuffedTK.SharedConfig.AutoJail}\n " +
+                       $"Prevent Damage: {CuffedTK.SharedConfig.PreventDamage}\n " +
+                       $"Reflect Damage: {CuffedTK.SharedConfig.ReflectDamage}";
             return true;
         }
     }

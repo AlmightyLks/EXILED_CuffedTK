@@ -24,7 +24,7 @@ namespace CuffedTK.Handlers
 
                 Log.Info(outputMessage);
 
-                if (CuffedTK.Instance.Config.AutoJail)
+                if (CuffedTK.SharedConfig.AutoJail)
                 {
                     ev.Killer.SetRole(RoleType.Tutorial);
                 }
@@ -37,12 +37,12 @@ namespace CuffedTK.Handlers
 
             if (RoleTypeHelper.CheckCuffedCase(ev.Target, ev.Attacker))
             {
-                if (CuffedTK.Instance.Config.ReflectDamage)
+                if (CuffedTK.SharedConfig.ReflectDamage)
                 {
                     ev.Attacker.Hurt(ev.Amount, ev.DamageType);
                     ev.Amount = 0;
                 }
-                else if (CuffedTK.Instance.Config.PreventDamage)
+                else if (CuffedTK.SharedConfig.PreventDamage)
                 {
                     ev.Amount = 0;
                 }

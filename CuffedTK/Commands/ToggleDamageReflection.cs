@@ -12,8 +12,8 @@ namespace CuffedTK.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            CuffedTK.Instance.Config.ReflectDamage = !CuffedTK.Instance.Config.ReflectDamage;
-            response = "Reflect Damage: " + CuffedTK.Instance.Config.ReflectDamage;
+            CuffedTK.SharedConfig.ReflectDamage = !CuffedTK.SharedConfig.ReflectDamage;
+            response = "Reflect Damage: " + CuffedTK.SharedConfig.ReflectDamage;
 
             return true;
         }
