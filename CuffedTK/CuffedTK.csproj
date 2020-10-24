@@ -7,8 +7,8 @@
     <ProjectGuid>{6E44AA60-62A6-4A8E-991A-7FE6B33F92D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CuffedTK</RootNamespace>
-    <AssemblyName>CuffedTK</AssemblyName>
+    <RootNamespace>CuffedTk</RootNamespace>
+    <AssemblyName>CuffedTk</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,11 +33,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp-Publicized">
-      <HintPath>bin\Debug\Exiled\Assembly-CSharp-Publicized.dll</HintPath>
+    <Reference Include="Assembly-CSharp_publicized">
+      <HintPath>..\..\..\dependencies\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
-      <HintPath>bin\Debug\Exiled\CommandSystem.Core.dll</HintPath>
+      <HintPath>..\..\..\dependencies\CommandSystem.Core.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.API, Version=2.1.8.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\EXILED.2.1.8.1\lib\net472\Exiled.API.dll</HintPath>
@@ -72,7 +72,7 @@
     <Compile Include="Commands\ToggleDamageReflection.cs" />
     <Compile Include="Commands\ToggleDamagePrevention.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="CuffedTK.cs" />
+    <Compile Include="CuffedTk.cs" />
     <Compile Include="Handler\Player.cs" />
     <Compile Include="Helper\RoleTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

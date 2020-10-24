@@ -24,14 +24,14 @@ namespace CuffedTK.Handlers
 
             if (RoleTypeHelper.CheckCuffedCase(ev.Target, ev.Killer))
             {
-                if (!String.Equals(CuffedTK.SharedConfig.WebhookUrl, String.Empty))
+                if (!String.Equals(CuffedTk.SharedConfig.WebhookUrl, String.Empty))
                     SendWebhookMessage(ev.Target.UserId, ev.Target.Nickname, ev.Killer.UserId, ev.Killer.Nickname);
 
                 ev.Target.SendConsoleMessage(outputMessage, "Red");
 
                 Log.Info(outputMessage);
 
-                if (CuffedTK.SharedConfig.AutoJail)
+                if (CuffedTk.SharedConfig.AutoJail)
                 {
                     ev.Killer.SetRole(RoleType.Tutorial);
                 }
@@ -44,12 +44,12 @@ namespace CuffedTK.Handlers
 
             if (RoleTypeHelper.CheckCuffedCase(ev.Target, ev.Attacker))
             {
-                if (CuffedTK.SharedConfig.ReflectDamage)
+                if (CuffedTk.SharedConfig.ReflectDamage)
                 {
                     ev.Attacker.Hurt(ev.Amount, ev.DamageType);
                     ev.Amount = 0;
                 }
-                else if (CuffedTK.SharedConfig.PreventDamage)
+                else if (CuffedTk.SharedConfig.PreventDamage)
                 {
                     ev.Amount = 0;
                 }
@@ -57,7 +57,7 @@ namespace CuffedTK.Handlers
         }
         private void SendWebhookMessage(string victimID, string victimName, string killerID, string killerName)
         {
-            _webRequest = WebRequest.Create(CuffedTK.SharedConfig.WebhookUrl);
+            _webRequest = WebRequest.Create(CuffedTk.SharedConfig.WebhookUrl);
 
             if (_webRequest == null)
             {

@@ -5,7 +5,7 @@ using System;
 
 namespace CuffedTK
 {
-    internal class CuffedTK : Plugin<Config>
+    internal class CuffedTk : Plugin<Config>
     {
         public override PluginPriority Priority { get; } = PluginPriority.Default;
         internal static Config SharedConfig { get; set; }
@@ -16,7 +16,7 @@ namespace CuffedTK
             if (SharedConfig is null)
                 SharedConfig = Config;
 
-            Log.Info("<AlmightyLks> Plugin Loaded");
+            Log.Info("<AlmightyLks> CuffedTk Loaded");
 
             RegisterEvents();
             base.OnEnabled();

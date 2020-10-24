@@ -12,8 +12,8 @@ namespace CuffedTK.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            CuffedTK.SharedConfig.AutoJail = !CuffedTK.SharedConfig.AutoJail;
-            response = "Auto jail: " + CuffedTK.SharedConfig.AutoJail;
+            CuffedTk.SharedConfig.AutoJail = !CuffedTk.SharedConfig.AutoJail;
+            response = "Auto jail: " + CuffedTk.SharedConfig.AutoJail;
             return true;
         }
     }

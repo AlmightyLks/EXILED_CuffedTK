@@ -12,8 +12,8 @@ namespace CuffedTK.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            CuffedTK.SharedConfig.PreventDamage = !CuffedTK.SharedConfig.PreventDamage;
-            response = "Prevent Damage: " + CuffedTK.SharedConfig.PreventDamage;
+            CuffedTk.SharedConfig.PreventDamage = !CuffedTk.SharedConfig.PreventDamage;
+            response = "Prevent Damage: " + CuffedTk.SharedConfig.PreventDamage;
             return true;
         }
     }

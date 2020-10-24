@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuffedTK", "CuffedTK\CuffedTK.csproj", "{6E44AA60-62A6-4A8E-991A-7FE6B33F92D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuffedTk", "CuffedTk\CuffedTk.csproj", "{6E44AA60-62A6-4A8E-991A-7FE6B33F92D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A19F8923-747E-48F0-B637-8BD669DC7621}
+		SolutionGuid = {946B6B85-9DD9-41B9-9FB1-140D1F29858B}
 	EndGlobalSection
 EndGlobal
