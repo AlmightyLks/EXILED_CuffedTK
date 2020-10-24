@@ -4,7 +4,7 @@ using System;
 namespace CuffedTK.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
-    public class ToggleAutoJail : ICommand
+    internal class ToggleAutoJail : ICommand
     {
         public string Command { get; } = "autojail";
         public string[] Aliases { get; } = new[] { "aj" };

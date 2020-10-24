@@ -5,7 +5,7 @@ namespace CuffedTK
 {
     public sealed class Config : IConfig
     {
-        public bool IsEnabled { get; set; }
+        public bool IsEnabled { get; set; } = true;
 
         [Description("Auto jailing on Cuffed Teamkilling")]
         public bool AutoJail { get; set; } = false;
@@ -15,5 +15,8 @@ namespace CuffedTK
 
         [Description("Damage reflection on attempted Cuffed Teamkilling")]
         public bool ReflectDamage { get; set; } = false;
+
+        [Description("Webhook url")]
+        public string WebhookUrl { get; set; } = string.Empty;
     }
 }

@@ -4,7 +4,7 @@ using System;
 namespace CuffedTK.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
-    public class ToggleDamagePrevention : ICommand
+    internal class ToggleDamagePrevention : ICommand
     {
         public string Command { get; } = "pdmg";
         public string[] Aliases { get; } = { };

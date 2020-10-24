@@ -4,7 +4,7 @@ using System;
 namespace CuffedTK.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
-    public class DisplayConfigValues : ICommand
+    internal class DisplayConfigValues : ICommand
     {
         public string Command { get; } = "ctkinfo";
         public string[] Aliases { get; } = { };

@@ -5,10 +5,10 @@ using System;
 
 namespace CuffedTK
 {
-    public class CuffedTK : Plugin<Config>
+    internal class CuffedTK : Plugin<Config>
     {
         public override PluginPriority Priority { get; } = PluginPriority.Default;
-        public static Config SharedConfig { get; set; }
+        internal static Config SharedConfig { get; set; }
         private Handlers.Player _player;
 
         public override void OnEnabled()
@@ -26,10 +26,11 @@ namespace CuffedTK
             UnregisterEvents();
             base.OnDisabled();
         }
+        
         private void RegisterEvents()
         {
             _player = new Handlers.Player();
-
+            
             ExPlayerEvents.Died += _player.OnPlayerDeath;
             ExPlayerEvents.Hurting += _player.OnPlayerHurt;
         }
@@ -37,6 +38,7 @@ namespace CuffedTK
         {
             ExPlayerEvents.Died -= _player.OnPlayerDeath;
             ExPlayerEvents.Hurting -= _player.OnPlayerHurt;
+
             _player = null;
         }
     }
